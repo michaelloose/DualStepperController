@@ -1,0 +1,24 @@
+{
+    "Header": {
+        "Comment": "All values are metric (mm)",
+        "CreationDate": "2020-11-10T15:50:22Z",
+        "GenerationSoftware": {
+            "Application": "EAGLE",
+            "Vendor": "Autodesk",
+            "Version": "9.6.0"
+        },
+        "Part": "Single"
+    },
+    "Overall": {
+        "BoardThickness": 1.57,
+        "LayerNumber": 2,
+        "Name": {
+            "ProjectId": "Motorcontroller"
+        },
+        "Owner": "Michael Loose <michael.loose@student.fhws.de>",
+        "Size": {
+            "X": 79.977,
+            "Y": 40
+        }
+    }
+}

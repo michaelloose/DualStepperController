@@ -1,0 +1,59 @@
+Partlist
+
+Exported from Motorcontroller.brd at 10.11.2020 17:41
+
+EAGLE Version 9.6.0 Copyright (c) 1988-2020 Autodesk, Inc.
+
+Assembly variant: 
+
+Part     Value              Package         Library           Position (mm)         Orientation
+
+C1       100n               C0805           SmartPrj          (16.209 5.193)        R90
+C2       100n               C0805           SmartPrj          (53.6 14.8)           R0
+C3       22p                C0805           SmartPrj          (57.6 14.8)           R0
+C4       22p                C0805           SmartPrj          (57.6 22)             R0
+C5       1uF                C0805           SmartPrj          (26.77 16.33)         R90
+C6       100n               C0805           SmartPrj          (29.786 16.336)       R270
+C7       1uF                C0805           SmartPrj          (41.887 8.629)        R270
+C8       10u                SMC_B           rcl               (15.75 29.32)         R90
+C9       100n               C0805           SmartPrj          (11 33)               R0
+C10      100n               C0805           rcl               (48 31)               R90
+C11      100n               C0805           rcl               (57 31)               R90
+D2       CD1206-S01575      MINIMELF        diode             (23.87 27.25)         R0
+F1       MF-MSMF050-2 500mA L1812           rcl               (21.56 6.22)          R90
+FID1     FIDUCIALMOUNT      FIDUCIA-MOUNT   SmartPrj          (34.9 13)             R0
+FID2     FIDUCIALMOUNT      FIDUCIA-MOUNT   SmartPrj          (7 3)                 R0
+FID3     FIDUCIALMOUNT      FIDUCIA-MOUNT   SmartPrj          (74 34)               R0
+FID4     FIDUCIALMOUNT      FIDUCIA-MOUNT   SmartPrj          (7 34)                R0
+ICSP     ICSP               2X03            SmartPrj          (50.72 5.11)          R0
+JST1                        MA06-1          con-lstb          (22 36)               R180
+JST2                        MA06-1          con-lstb          (52 36)               R180
+JST3                        MA04-1          con-lstb          (75 25)               R90
+JST4                        MA04-1          con-lstb          (75 12)               R90
+L1       MH2029-300Y        0805            wuerth-elektronik (25.23 21.21)         R270
+ON       Green              CHIPLED_0805    led               (4.08 31.06)          R270
+R1       1M                 R0805           SmartPrj          (53.52 18.528)        R270
+R2       1k                 R0805           rcl               (11 30)               R0
+R3       1k                 R0805           rcl               (11 24)               R0
+R4       22R                R0805           rcl               (37.508 6.746)        R0
+R5       22R                R0805           rcl               (37.497 8.945)        R0
+R6       1k                 R0805           rcl               (11 27)               R0
+R7       10k                R0805           rcl               (60 31)               R90
+R8       10k                R0805           rcl               (45 31)               R90
+R9       10k                R0805           rcl               (23.87 24.44)         R180
+R10      10k                R0805           rcl               (56.5 10.6)           R90
+R11      10k                R0805           rcl               (58.9 10.6)           R270
+R12      10k                R0805           rcl               (33 26)               R0
+RX       Yellow             CHIPLED_0805    led               (4.08 24.25)          R90
+S1                          B3F-10XX        switch-omron      (66.12 4.89)          R0
+S2                          DIP02YL         switch-dil        (66 17)               R180
+SJ1                         SJ_2            jumper            (49.8 23)             R90
+SJ2                         SJ_2            jumper            (53 23)               R90
+TX       Yellow             CHIPLED_0805    led               (4.08 27.44)          R90
+U1       ATMEGA32U4-XUAU    TQFP44-PAD      SmartPrj          (40.74 18.94)         R90
+X1       PN61729-S          PN61729-S       con-berg          (6.35 12.7)           R270
+X2                          W237-102        con-wago-500      (37 34)               R180
+X3                          W237-102        con-wago-500      (67 34)               R180
+Y1       16MHz KX-7         CRYSTAL-3.2-2.5 SmartPrj          (57.6 18.528)         R270
+Z1       CG0603MLC-05E      CT/CN0805       varistor          (16.2 11.645)         R270
+Z2       CG0603MLC-05E      CT/CN0805       varistor          (16.2 15.619)         R90
