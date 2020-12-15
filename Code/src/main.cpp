@@ -8,20 +8,20 @@
 #define controller_name "Radar Motor Controller V1.0"
 
 //Pins attached
-#define turntable_pin_enable 2
-#define turntable_pin_step 3
-#define turntable_pin_direction 4
-#define turntable_pin_reference 8
+#define turntable_pin_enable 8
+#define turntable_pin_direction 9
+#define turntable_pin_step 10
+#define turntable_pin_reference 7
 
 #define turntable_speed_max 14
 //#define turntable_steps_per_unit 1000
 #define turntable_steps_per_unit 2000
 #define turntable_home_offset 4.5
 
-#define lineardrive_pin_enable 5
-#define lineardrive_pin_step 6
-#define lineardrive_pin_direction 7
-#define lineardrive_pin_reference 9
+#define lineardrive_pin_enable 11
+#define lineardrive_pin_direction 12
+#define lineardrive_pin_step 13
+#define lineardrive_pin_reference 6
 
 #define lineardrive_speed_max 330
 #define lineardrive_steps_per_unit 111.11
