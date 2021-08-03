@@ -15,6 +15,7 @@ Zu erledigende Aufgaben
 - Software Not Aus Implementieren Befehl stoppt alle Bewegungen und deaktiviert den Enable Pin der Controller
 - Positionsanzeige über I²C Display
 - Steuerung über Hardware Joystick
+- ID vom Gerät auf Anfrage ausgeben
 - Konstanten in EEPROM hinterlegen und über Befehle einstellbar machen:
     - Anzahl Schritte pro Einheit
     - Offset vom Referenzschalter zu Nullposition

@@ -1,0 +1,405 @@
+---
+Request Nr. 0 - 24/06/2021 14:13:09.381033
+f -> "+25" Response-Time: 10.0654ms
+i -> "0" Response-Time: 4.0447ms
+l -> "*" Response-Time: 3.1524ms
+o -> "0" Response-Time: 2.0572ms
+p -> "0" Response-Time: 5.292ms
+r -> "0" Response-Time: 4.171ms
+t -> "0" Response-Time: 3.4511ms
+v -> "0" Response-Time: 3.9177ms
+---
+Request Nr. 1 - 24/06/2021 14:13:09.426985
+f -> "0" Response-Time: 3.1065ms
+i -> "000" Response-Time: 4.2035ms
+l -> "000" Response-Time: 4.1003ms
+o -> "000" Response-Time: 4.1404ms
+p -> "000" Response-Time: 4.1513ms
+r -> "000" Response-Time: 4.1467ms
+t -> "000" Response-Time: 4.1287ms
+v -> "000" Response-Time: 4.2293ms
+---
+Request Nr. 2 - 24/06/2021 14:13:09.459900
+f -> "000" Response-Time: 3.6622ms
+i -> "000" Response-Time: 4.1133ms
+l -> "000" Response-Time: 4.1782ms
+o -> "000" Response-Time: 4.155ms
+p -> "000" Response-Time: 4.1325ms
+r -> "000" Response-Time: 4.1465ms
+t -> "000" Response-Time: 4.1611ms
+v -> "000" Response-Time: 4.2128ms
+---
+Request Nr. 3 - 24/06/2021 14:13:09.492818
+f -> "000" Response-Time: 3.5766ms
+i -> "000" Response-Time: 4.1456ms
+l -> "000" Response-Time: 4.1301ms
+o -> "000" Response-Time: 4.1494ms
+p -> "000" Response-Time: 4.1513ms
+r -> "000" Response-Time: 4.1302ms
+t -> "000" Response-Time: 4.1529ms
+v -> "000" Response-Time: 4.2167ms
+---
+Request Nr. 4 - 24/06/2021 14:13:09.526817
+f -> "000" Response-Time: 3.6634ms
+i -> "000" Response-Time: 4.1819ms
+l -> "000" Response-Time: 4.1253ms
+o -> "000" Response-Time: 4.14ms
+p -> "000" Response-Time: 4.1523ms
+r -> "000" Response-Time: 4.1493ms
+t -> "000" Response-Time: 4.1338ms
+v -> "000" Response-Time: 4.2092ms
+---
+Request Nr. 5 - 24/06/2021 14:13:09.559731
+f -> "000" Response-Time: 3.6119ms
+i -> "000" Response-Time: 4.1783ms
+l -> "000" Response-Time: 4.1247ms
+o -> "000" Response-Time: 4.1395ms
+p -> "000" Response-Time: 4.1316ms
+r -> "000" Response-Time: 4.1457ms
+t -> "000" Response-Time: 4.1509ms
+v -> "000" Response-Time: 4.148ms
+---
+Request Nr. 6 - 24/06/2021 14:13:09.592641
+f -> "000" Response-Time: 3.762ms
+i -> "000" Response-Time: 4.1729ms
+l -> "000" Response-Time: 4.1061ms
+o -> "000" Response-Time: 4.1591ms
+p -> "000" Response-Time: 4.1554ms
+r -> "000" Response-Time: 4.133ms
+t -> "000" Response-Time: 4.1563ms
+v -> "000" Response-Time: 4.1837ms
+---
+Request Nr. 7 - 24/06/2021 14:13:09.626549
+f -> "000" Response-Time: 3.6623ms
+i -> "000" Response-Time: 4.1611ms
+l -> "000" Response-Time: 4.1228ms
+o -> "000" Response-Time: 4.1523ms
+p -> "000" Response-Time: 4.1597ms
+r -> "000" Response-Time: 4.1474ms
+t -> "000" Response-Time: 4.1161ms
+v -> "000" Response-Time: 4.2225ms
+---
+Request Nr. 8 - 24/06/2021 14:13:09.660459
+f -> "000" Response-Time: 3.5172ms
+i -> "000" Response-Time: 4.1353ms
+l -> "000" Response-Time: 4.1195ms
+o -> "000" Response-Time: 4.1868ms
+p -> "000" Response-Time: 4.1412ms
+r -> "000" Response-Time: 4.1255ms
+t -> "000" Response-Time: 4.1818ms
+v -> "000" Response-Time: 4.198ms
+---
+Request Nr. 9 - 24/06/2021 14:13:09.693373
+f -> "000" Response-Time: 3.4746ms
+i -> "000" Response-Time: 4.2267ms
+l -> "000" Response-Time: 3.9841ms
+o -> "000" Response-Time: 4.167ms
+p -> "000" Response-Time: 4.1549ms
+r -> "000" Response-Time: 4.1807ms
+t -> "000" Response-Time: 4.1469ms
+v -> "000" Response-Time: 4.1143ms
+---
+Request Nr. 10 - 24/06/2021 14:13:09.726283
+f -> "000" Response-Time: 3.7436ms
+i -> "000" Response-Time: 4.1247ms
+l -> "000" Response-Time: 4.1537ms
+o -> "000" Response-Time: 4.1523ms
+p -> "000" Response-Time: 4.1481ms
+r -> "000" Response-Time: 4.2321ms
+t -> "000" Response-Time: 4.0595ms
+v -> "000" Response-Time: 4.1647ms
+---
+Request Nr. 11 - 24/06/2021 14:13:09.760192
+f -> "000" Response-Time: 3.7463ms
+i -> "000" Response-Time: 4.1153ms
+l -> "000" Response-Time: 4.179ms
+o -> "000" Response-Time: 4.1691ms
+p -> "000" Response-Time: 4.1085ms
+r -> "000" Response-Time: 4.1519ms
+t -> "000" Response-Time: 4.1354ms
+v -> "000" Response-Time: 4.1477ms
+---
+Request Nr. 12 - 24/06/2021 14:13:09.793103
+f -> "000" Response-Time: 3.8498ms
+i -> "000" Response-Time: 4.1513ms
+l -> "000" Response-Time: 4.1061ms
+o -> "000" Response-Time: 4.146ms
+p -> "000" Response-Time: 4.1769ms
+r -> "000" Response-Time: 4.1813ms
+t -> "000" Response-Time: 4.0756ms
+v -> "000" Response-Time: 4.175ms
+---
+Request Nr. 13 - 24/06/2021 14:13:09.826015
+f -> "000" Response-Time: 3.7596ms
+i -> "000" Response-Time: 4.2342ms
+l -> "000" Response-Time: 4.0341ms
+o -> "000" Response-Time: 4.1203ms
+p -> "000" Response-Time: 4.1134ms
+r -> "000" Response-Time: 4.1966ms
+t -> "000" Response-Time: 4.1229ms
+v -> "000" Response-Time: 4.1772ms
+---
+Request Nr. 14 - 24/06/2021 14:13:09.859925
+f -> "000" Response-Time: 3.7485ms
+i -> "000" Response-Time: 4.1571ms
+l -> "000" Response-Time: 4.1012ms
+o -> "000" Response-Time: 4.1724ms
+p -> "000" Response-Time: 4.1107ms
+r -> "000" Response-Time: 4.2025ms
+t -> "000" Response-Time: 4.1194ms
+v -> "000" Response-Time: 4.1058ms
+---
+Request Nr. 15 - 24/06/2021 14:13:09.892838
+f -> "000" Response-Time: 3.8285ms
+i -> "000" Response-Time: 4.2159ms
+l -> "000" Response-Time: 4.0857ms
+o -> "000" Response-Time: 4.1492ms
+p -> "000" Response-Time: 4.1723ms
+r -> "000" Response-Time: 4.1823ms
+t -> "000" Response-Time: 4.0056ms
+v -> "000" Response-Time: 4.1629ms
+---
+Request Nr. 16 - 24/06/2021 14:13:09.926747
+f -> "000" Response-Time: 3.8141ms
+i -> "000" Response-Time: 4.1587ms
+l -> "000" Response-Time: 4.3923ms
+o -> "000" Response-Time: 3.8472ms
+p -> "000" Response-Time: 4.1343ms
+r -> "000" Response-Time: 4.1451ms
+t -> "000" Response-Time: 4.1254ms
+v -> "000" Response-Time: 4.1659ms
+---
+Request Nr. 17 - 24/06/2021 14:13:09.959659
+f -> "000" Response-Time: 3.8322ms
+i -> "000" Response-Time: 4.1522ms
+l -> "000" Response-Time: 4.1134ms
+o -> "000" Response-Time: 4.2433ms
+p -> "000" Response-Time: 4.0344ms
+r -> "000" Response-Time: 4.1904ms
+t -> "000" Response-Time: 4.1058ms
+v -> "000" Response-Time: 4.1942ms
+---
+Request Nr. 18 - 24/06/2021 14:13:09.993570
+f -> "000" Response-Time: 3.4915ms
+i -> "000" Response-Time: 4.1691ms
+l -> "000" Response-Time: 4.0959ms
+o -> "000" Response-Time: 4.2716ms
+p -> "000" Response-Time: 4.0082ms
+r -> "000" Response-Time: 4.1905ms
+t -> "000" Response-Time: 4.0996ms
+v -> "000" Response-Time: 4.229ms
+---
+Request Nr. 19 - 24/06/2021 14:13:10.026485
+f -> "000" Response-Time: 3.5085ms
+i -> "000" Response-Time: 4.1821ms
+l -> "000" Response-Time: 4.1391ms
+o -> "000" Response-Time: 4.1763ms
+p -> "000" Response-Time: 4.0616ms
+r -> "000" Response-Time: 4.1868ms
+t -> "000" Response-Time: 4.109ms
+v -> "000" Response-Time: 4.2117ms
+---
+Request Nr. 20 - 24/06/2021 14:13:10.060390
+f -> "000" Response-Time: 3.4295ms
+i -> "000" Response-Time: 4.1569ms
+l -> "000" Response-Time: 4.1443ms
+o -> "000" Response-Time: 4.2001ms
+p -> "000" Response-Time: 4.0467ms
+r -> "000" Response-Time: 4.1568ms
+t -> "000" Response-Time: 4.174ms
+v -> "000" Response-Time: 4.1965ms
+---
+Request Nr. 21 - 24/06/2021 14:13:10.093305
+f -> "000" Response-Time: 3.4317ms
+i -> "000" Response-Time: 4.1688ms
+l -> "000" Response-Time: 4.1071ms
+o -> "000" Response-Time: 4.1585ms
+p -> "000" Response-Time: 4.1621ms
+r -> "000" Response-Time: 4.1982ms
+t -> "000" Response-Time: 4.0792ms
+v -> "000" Response-Time: 4.1642ms
+---
+Request Nr. 22 - 24/06/2021 14:13:10.126213
+f -> "000" Response-Time: 3.804ms
+i -> "000" Response-Time: 4.1941ms
+l -> "000" Response-Time: 4.1381ms
+o -> "000" Response-Time: 4.1993ms
+p -> "000" Response-Time: 4.0833ms
+r -> "000" Response-Time: 4.1319ms
+t -> "000" Response-Time: 4.1396ms
+v -> "000" Response-Time: 4.2197ms
+---
+Request Nr. 23 - 24/06/2021 14:13:10.160125
+f -> "000" Response-Time: 3.5164ms
+i -> "000" Response-Time: 4.1501ms
+l -> "000" Response-Time: 4.1482ms
+o -> "000" Response-Time: 4.2012ms
+p -> "000" Response-Time: 4.0475ms
+r -> "000" Response-Time: 4.1685ms
+t -> "000" Response-Time: 4.1584ms
+v -> "000" Response-Time: 4.161ms
+---
+Request Nr. 24 - 24/06/2021 14:13:10.193036
+f -> "000" Response-Time: 3.5564ms
+i -> "000" Response-Time: 4.1879ms
+l -> "000" Response-Time: 4.1068ms
+o -> "000" Response-Time: 4.0845ms
+p -> "000" Response-Time: 4.0648ms
+r -> "000" Response-Time: 4.1553ms
+t -> "000" Response-Time: 4.1418ms
+v -> "000" Response-Time: 4.2031ms
+---
+Request Nr. 25 - 24/06/2021 14:13:10.226952
+f -> "000" Response-Time: 3.4835ms
+i -> "000" Response-Time: 4.1817ms
+l -> "000" Response-Time: 4.1482ms
+o -> "000" Response-Time: 4.1583ms
+p -> "000" Response-Time: 4.0819ms
+r -> "000" Response-Time: 4.1853ms
+t -> "000" Response-Time: 4.1105ms
+v -> "000" Response-Time: 4.2202ms
+---
+Request Nr. 26 - 24/06/2021 14:13:10.259858
+f -> "000" Response-Time: 3.5686ms
+i -> "000" Response-Time: 4.1145ms
+l -> "000" Response-Time: 4.1665ms
+o -> "000" Response-Time: 4.1972ms
+p -> "000" Response-Time: 4.0503ms
+r -> "000" Response-Time: 4.1806ms
+t -> "000" Response-Time: 4.1342ms
+v -> "000" Response-Time: 4.1885ms
+---
+Request Nr. 27 - 24/06/2021 14:13:10.293766
+f -> "000" Response-Time: 3.4603ms
+i -> "000" Response-Time: 4.1908ms
+l -> "000" Response-Time: 4.0791ms
+o -> "000" Response-Time: 4.2401ms
+p -> "000" Response-Time: 4.0696ms
+r -> "000" Response-Time: 4.1584ms
+t -> "000" Response-Time: 4.1323ms
+v -> "000" Response-Time: 4.2152ms
+---
+Request Nr. 28 - 24/06/2021 14:13:10.326679
+f -> "000" Response-Time: 3.4817ms
+i -> "000" Response-Time: 4.171ms
+l -> "000" Response-Time: 4.1462ms
+o -> "000" Response-Time: 4.1803ms
+p -> "000" Response-Time: 4.0704ms
+r -> "000" Response-Time: 4.1783ms
+t -> "000" Response-Time: 4.1137ms
+v -> "000" Response-Time: 4.2139ms
+---
+Request Nr. 29 - 24/06/2021 14:13:10.359590
+f -> "000" Response-Time: 3.5779ms
+i -> "000" Response-Time: 4.1582ms
+l -> "000" Response-Time: 4.1358ms
+o -> "000" Response-Time: 4.215ms
+p -> "000" Response-Time: 4.0258ms
+r -> "000" Response-Time: 4.1997ms
+t -> "000" Response-Time: 4.1552ms
+v -> "000" Response-Time: 4.1847ms
+---
+Request Nr. 30 - 24/06/2021 14:13:10.393500
+f -> "000" Response-Time: 3.541ms
+i -> "000" Response-Time: 4.1729ms
+l -> "000" Response-Time: 4.1156ms
+o -> "000" Response-Time: 4.2078ms
+p -> "000" Response-Time: 4.0764ms
+r -> "000" Response-Time: 4.1518ms
+t -> "000" Response-Time: 4.1563ms
+v -> "000" Response-Time: 4.139ms
+---
+Request Nr. 31 - 24/06/2021 14:13:10.426410
+f -> "000" Response-Time: 3.6717ms
+i -> "000" Response-Time: 4.2397ms
+l -> "000" Response-Time: 4.0866ms
+o -> "000" Response-Time: 4.1377ms
+p -> "000" Response-Time: 4.1733ms
+r -> "000" Response-Time: 4.1792ms
+t -> "000" Response-Time: 4.1157ms
+v -> "000" Response-Time: 4.2359ms
+---
+Request Nr. 32 - 24/06/2021 14:13:10.460324
+f -> "000" Response-Time: 3.4873ms
+i -> "000" Response-Time: 4.1398ms
+l -> "000" Response-Time: 4.1376ms
+o -> "000" Response-Time: 4.2317ms
+p -> "000" Response-Time: 4.033ms
+r -> "000" Response-Time: 4.1764ms
+t -> "000" Response-Time: 4.1571ms
+v -> "000" Response-Time: 4.1825ms
+---
+Request Nr. 33 - 24/06/2021 14:13:10.493248
+f -> "000" Response-Time: 3.48ms
+i -> "000" Response-Time: 4.1897ms
+l -> "000" Response-Time: 4.1027ms
+o -> "000" Response-Time: 4.1902ms
+p -> "000" Response-Time: 4.0851ms
+r -> "000" Response-Time: 4.1597ms
+t -> "000" Response-Time: 4.1309ms
+v -> "000" Response-Time: 4.2151ms
+---
+Request Nr. 34 - 24/06/2021 14:13:10.526144
+f -> "000" Response-Time: 3.5265ms
+i -> "000" Response-Time: 4.1745ms
+l -> "000" Response-Time: 4.1542ms
+o -> "000" Response-Time: 4.1829ms
+p -> "000" Response-Time: 4.0723ms
+r -> "000" Response-Time: 4.1764ms
+t -> "000" Response-Time: 4.1315ms
+v -> "000" Response-Time: 4.2006ms
+---
+Request Nr. 35 - 24/06/2021 14:13:10.560055
+f -> "000" Response-Time: 3.485ms
+i -> "000" Response-Time: 4.1559ms
+l -> "000" Response-Time: 4.1368ms
+o -> "000" Response-Time: 4.2147ms
+p -> "000" Response-Time: 4.0471ms
+r -> "000" Response-Time: 4.1815ms
+t -> "000" Response-Time: 4.1468ms
+v -> "000" Response-Time: 4.1829ms
+---
+Request Nr. 36 - 24/06/2021 14:13:10.592966
+f -> "000" Response-Time: 3.4968ms
+i -> "000" Response-Time: 4.1757ms
+l -> "000" Response-Time: 4.1252ms
+o -> "000" Response-Time: 4.2187ms
+p -> "000" Response-Time: 4.0646ms
+r -> "000" Response-Time: 4.1515ms
+t -> "000" Response-Time: 4.142ms
+v -> "000" Response-Time: 4.2078ms
+---
+Request Nr. 37 - 24/06/2021 14:13:10.626876
+f -> "000" Response-Time: 3.4797ms
+i -> "000" Response-Time: 4.1774ms
+l -> "000" Response-Time: 4.138ms
+o -> "000" Response-Time: 4.1951ms
+p -> "000" Response-Time: 4.0627ms
+r -> "000" Response-Time: 4.1816ms
+t -> "000" Response-Time: 4.1521ms
+v -> "000" Response-Time: 4.1893ms
+---
+Request Nr. 38 - 24/06/2021 14:13:10.659788
+f -> "000" Response-Time: 3.4956ms
+i -> "000" Response-Time: 4.1835ms
+l -> "000" Response-Time: 4.1457ms
+o -> "000" Response-Time: 4.2133ms
+p -> "000" Response-Time: 4.0673ms
+r -> "000" Response-Time: 4.151ms
+t -> "000" Response-Time: 4.1506ms
+v -> "000" Response-Time: 4.1818ms
+---
+Request Nr. 39 - 24/06/2021 14:13:10.693704
+f -> "000" Response-Time: 3.4587ms
+i -> "000" Response-Time: 4.1811ms
+l -> "000" Response-Time: 4.1265ms
+o -> "000" Response-Time: 4.266ms
+p -> "000" Response-Time: 4.0073ms
+r -> "000" Response-Time: 4.1543ms
+t -> "000" Response-Time: 4.145ms
+v -> "000" Response-Time: 4.2391ms
+---
+Request Nr. 40 - 24/06/2021 14:13:10.726609
+f -> "000" Response-Time: 3.4754ms
+i -> "000" Response-Time: 4.1592ms
+TIMEOUT AT COMMAND "l" at 24/06/2021 14:13:11.720209
