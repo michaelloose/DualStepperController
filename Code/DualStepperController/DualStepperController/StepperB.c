@@ -251,7 +251,7 @@ double stepper_b_getSpeed(){
 }
 
 void stepper_b_setMotionState(int8_t state){
-	if(state < 0 && !stepper_b_moving){
+	if(state < 0 && (!stepper_b_moving || stepper_b_direction)){
 		stepper_b_direction = 0;
 		
 		if(stepper_b_settings.invert_direction)
@@ -264,7 +264,7 @@ void stepper_b_setMotionState(int8_t state){
 
 		
 	}
-	else if(state > 0 && !stepper_b_moving){
+	else if(state > 0 && (!stepper_b_moving || !stepper_b_direction)){
 		stepper_b_direction = 1;
 		if(stepper_b_settings.invert_direction)
 		STEPPER_B_DIRECTION_PORT &= ~(1<<STEPPER_B_DIRECTION_N);    //Direction Pin Low

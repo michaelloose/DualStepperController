@@ -50,11 +50,11 @@ void stepper_a_init(){
 }
 
 void stepper_a_loop(USB_ClassInfo_CDC_Device_t* pInterface){
-	if (stepper_a_settings.polarity_reference_switch != ((STEPPER_A_REFERENCE_PIN & (1 << STEPPER_A_REFERENCE_N)) == (1 << STEPPER_A_REFERENCE_N)))
-	PORTD &= ~(1<<5);    //Bit setzen, LED AN
-
-	else
-	PORTD |= (1<<5);    //Bit setzen, LED AUS
+// 	if (stepper_a_settings.polarity_reference_switch != ((STEPPER_A_REFERENCE_PIN & (1 << STEPPER_A_REFERENCE_N)) == (1 << STEPPER_A_REFERENCE_N)))
+// 	PORTD &= ~(1<<5);    //Bit setzen, LED AN
+// 
+// 	else
+// 	PORTD |= (1<<5);    //Bit setzen, LED AUS
 	
 	//In welchem Zustand befindet sich der Referenzierungsvorgang?
 	switch (stepper_a_referencing)
@@ -251,7 +251,7 @@ double stepper_a_getSpeed(){
 }
 
 void stepper_a_setMotionState(int8_t state){
-	if(state < 0 && !stepper_a_moving){
+	if(state < 0 && (!stepper_a_moving || stepper_a_direction)){
 		stepper_a_direction = 0;
 		
 		if(stepper_a_settings.invert_direction)
@@ -264,7 +264,7 @@ void stepper_a_setMotionState(int8_t state){
 
 		
 	}
-	else if(state > 0 && !stepper_a_moving){
+	else if(state > 0 && (!stepper_a_moving || !stepper_a_direction)){
 		stepper_a_direction = 1;
 		if(stepper_a_settings.invert_direction)
 		STEPPER_A_DIRECTION_PORT &= ~(1<<STEPPER_A_DIRECTION_N);    //Direction Pin Low
