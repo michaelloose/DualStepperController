@@ -4,6 +4,9 @@
  * Created: 21.06.2021 12:04:21
  *  Author: Waxrek
  */ 
+
+
+#define PULSE_LEN 2.75e-6 
 #define STEPPER_A_SETTINGS_START_ADDR 0x00
 #define STEPPER_B_SETTINGS_START_ADDR 0x20
 typedef struct 

@@ -50,11 +50,11 @@ void stepper_a_init(){
 }
 
 void stepper_a_loop(USB_ClassInfo_CDC_Device_t* pInterface){
-// 	if (stepper_a_settings.polarity_reference_switch != ((STEPPER_A_REFERENCE_PIN & (1 << STEPPER_A_REFERENCE_N)) == (1 << STEPPER_A_REFERENCE_N)))
-// 	PORTD &= ~(1<<5);    //Bit setzen, LED AN
-// 
-// 	else
-// 	PORTD |= (1<<5);    //Bit setzen, LED AUS
+	// 	if (stepper_a_settings.polarity_reference_switch != ((STEPPER_A_REFERENCE_PIN & (1 << STEPPER_A_REFERENCE_N)) == (1 << STEPPER_A_REFERENCE_N)))
+	// 	PORTD &= ~(1<<5);    //Bit setzen, LED AN
+	//
+	// 	else
+	// 	PORTD |= (1<<5);    //Bit setzen, LED AUS
 	
 	//In welchem Zustand befindet sich der Referenzierungsvorgang?
 	switch (stepper_a_referencing)
@@ -178,7 +178,8 @@ uint8_t stepper_a_setSetPoint(double value){
 	return 0;
 }
 
-double stepper_a_getPosition(){
+double stepper_a_getPosition()
+{
 	return (double)stepper_a_position / stepper_a_settings.steps_per_unit;
 }
 
@@ -223,8 +224,9 @@ uint8_t stepper_a_setSpeed(double value){
 		stepper_a_speed_factor = (double)F_CPU / ((double)stepper_a_settings.steps_per_unit * (double)stepper_a_prescalerFactor);
 		//Subtracting the Length of one Output Pulse (~2.9us per Step) in TimerRegister Units: Used to compensate the Length of the Pulse, so the Speed is accurate
 		
-		//uint16_t ocr = (uint16_t)((stepper_a_speed_factor / value)-(PULSE_LEN * ((double)F_CPU / (double)stepper_a_prescalerFactor)));
-		uint16_t ocr = (uint16_t)(stepper_a_speed_factor / value);
+		//uint16_t ocr = (uint16_t)(stepper_a_speed_factor / value);
+		uint16_t ocr = (uint16_t)((stepper_a_speed_factor / value)-((double)PULSE_LEN * ((double)F_CPU / (double)stepper_a_prescalerFactor)));
+
 
 		//_SFR_MEM16(OCRA) = (uint16_t)ocr;
 		//Disable Interrupts
@@ -245,9 +247,9 @@ uint8_t stepper_a_setSpeed(double value){
 	
 }
 double stepper_a_getSpeed(){
-	return (stepper_a_speed_factor / (double)STEPPER_A_TIMER_OCRA);
+	return (stepper_a_speed_factor/((double)STEPPER_A_TIMER_OCRA + ((double)PULSE_LEN * ((double)F_CPU / (double)stepper_a_prescalerFactor))));
 
-	//return (stepper_a_speed_factor / (double)STEPPER_A_TIMER_OCRA) - ( (double)stepper_a_prescalerFactor / (PULSE_LEN*(double)F_CPU));
+	//return (stepper_a_speed_factor / (double)STEPPER_A_TIMER_OCRA);
 }
 
 void stepper_a_setMotionState(int8_t state){

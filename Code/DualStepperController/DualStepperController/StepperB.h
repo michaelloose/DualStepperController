@@ -24,7 +24,7 @@
 #define STEPPER_B_TIMER_OCRA OCR3A
 #define STEPPER_B_TIMER_TIMSK TIMSK3
 #define STEPPER_B_TIMER_COMPA_vect TIMER3_COMPA_vect
-#define PULSE_LEN 2.9e-6 
+
 
 double stepper_b_speed_factor;
 

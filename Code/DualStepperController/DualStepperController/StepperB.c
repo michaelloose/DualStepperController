@@ -125,12 +125,12 @@ void stepper_b_loop(USB_ClassInfo_CDC_Device_t* pInterface){
 		{
 			stepper_b_hasPreviouslyMoved = 0;
 			stepper_b_hasPreviouslyHomed = 0;
-			CDC_Device_SendString(pInterface, "AH!\r");
+			CDC_Device_SendString(pInterface, "BH!\r");
 		}
 		else if(!stepper_b_hasPreviouslyHomed)
 		{
 			stepper_b_hasPreviouslyMoved = 0;
-			CDC_Device_SendString(pInterface, "AP!\r");
+			CDC_Device_SendString(pInterface, "BP!\r");
 		}
 	}
 	
@@ -223,8 +223,8 @@ uint8_t stepper_b_setSpeed(double value){
 		stepper_b_speed_factor = (double)F_CPU / ((double)stepper_b_settings.steps_per_unit * (double)stepper_b_prescalerFactor);
 		//Subtracting the Length of one Output Pulse (~2.9us per Step) in TimerRegister Units: Used to compensate the Length of the Pulse, so the Speed is accurate
 		
-		//uint16_t ocr = (uint16_t)((stepper_b_speed_factor / value)-(PULSE_LEN * ((double)F_CPU / (double)stepper_b_prescalerFactor)));
-		uint16_t ocr = (uint16_t)(stepper_b_speed_factor / value);
+		uint16_t ocr = (uint16_t)((stepper_b_speed_factor / value)-((double)PULSE_LEN * ((double)F_CPU / (double)stepper_b_prescalerFactor)));
+		//uint16_t ocr = (uint16_t)(stepper_b_speed_factor / value);
 
 		//_SFR_MEM16(OCRA) = (uint16_t)ocr;
 		//Disable Interrupts
@@ -245,9 +245,9 @@ uint8_t stepper_b_setSpeed(double value){
 	
 }
 double stepper_b_getSpeed(){
-	return (stepper_b_speed_factor / (double)STEPPER_B_TIMER_OCRA);
+	//return (stepper_b_speed_factor / (double)STEPPER_B_TIMER_OCRA);
 
-	//return (stepper_b_speed_factor / (double)STEPPER_B_TIMER_OCRA) - ( (double)stepper_b_prescalerFactor / (PULSE_LEN*(double)F_CPU));
+	return (stepper_b_speed_factor/((double)STEPPER_B_TIMER_OCRA + ((double)PULSE_LEN * ((double)F_CPU / (double)stepper_b_prescalerFactor))));
 }
 
 void stepper_b_setMotionState(int8_t state){

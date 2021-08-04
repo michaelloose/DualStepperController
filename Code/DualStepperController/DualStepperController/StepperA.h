@@ -27,7 +27,7 @@
 
 
 
-#define PULSE_LEN 2.9e-6 
+
 
 double stepper_a_speed_factor;
 
