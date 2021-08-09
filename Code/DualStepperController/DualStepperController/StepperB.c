@@ -125,7 +125,7 @@ void stepper_b_loop(USB_ClassInfo_CDC_Device_t* pInterface){
 		{
 			stepper_b_hasPreviouslyMoved = 0;
 			stepper_b_hasPreviouslyHomed = 0;
-			CDC_Device_SendString(pInterface, "BH!\r");
+			CDC_Device_SendString(pInterface, "BR!\r");
 		}
 		else if(!stepper_b_hasPreviouslyHomed)
 		{

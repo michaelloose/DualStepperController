@@ -303,7 +303,7 @@ void handleCommands(USB_ClassInfo_CDC_Device_t* pInterface){
 					
 					void (*pHome)(void);
 					void (*pZero)(void);
-					//void (*pHalt)(void);
+					void (*pHalt)(void);
 					uint8_t (*pSetSetPoint)(double);
 					double (*pGetPosition)(void);
 					uint8_t (*pSetSpeed)(double);
@@ -314,7 +314,7 @@ void handleCommands(USB_ClassInfo_CDC_Device_t* pInterface){
 						
 						pHome = &stepper_a_home;
 						pZero = &stepper_a_zero;
-						//pHalt = &stepper_a_halt;
+						pHalt = &stepper_a_halt;
 
 						pSetSetPoint = &stepper_a_setSetPoint;
 						pGetPosition = &stepper_a_getPosition;
@@ -327,7 +327,7 @@ void handleCommands(USB_ClassInfo_CDC_Device_t* pInterface){
 					else{
 						pHome = &stepper_b_home;
 						pZero = &stepper_b_zero;
-						//pHalt = &stepper_b_halt;
+						pHalt = &stepper_b_halt;
 
 						pSetSetPoint = &stepper_b_setSetPoint;
 						pGetPosition = &stepper_b_getPosition;
@@ -393,9 +393,16 @@ void handleCommands(USB_ClassInfo_CDC_Device_t* pInterface){
 							strcat(answerString, buffer);
 						}
 					}
-					if ((commandBuffer[1] == 'H') || (commandBuffer[1] == 'h'))
+					if ((commandBuffer[1] == 'R') || (commandBuffer[1] == 'r'))
 					{
 						
+						(*pHalt)();
+						strcpy(answerString, driveName);
+						strcat(answerString, "R=");
+					}
+					if ((commandBuffer[1] == 'H') || (commandBuffer[1] == 'h'))
+					{
+											
 						(*pHome)();
 						strcpy(answerString, driveName);
 						strcat(answerString, "H=");
