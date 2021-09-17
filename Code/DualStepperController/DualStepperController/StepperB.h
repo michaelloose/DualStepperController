@@ -33,7 +33,6 @@ int8_t stepper_b_direction;
 int8_t stepper_b_hasPreviouslyMoved;
 int8_t stepper_b_hasPreviouslyHomed;
 int8_t stepper_b_referencing;
-int8_t stepper_b_prescalerState;
 int16_t stepper_b_prescalerFactor;
 
 long stepper_b_setpoint;
@@ -52,7 +51,7 @@ uint8_t stepper_b_setSpeed(double);
 double stepper_b_getSpeed(void);
 
 void stepper_b_setMotionState(int8_t);
-void stepper_b_setPrescaler(int8_t);
+void stepper_b_setPrescaler(int16_t);
 
 void stepper_b_init(void);
 void stepper_b_loop(USB_ClassInfo_CDC_Device_t*);

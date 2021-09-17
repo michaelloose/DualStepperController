@@ -18,8 +18,7 @@ void stepper_a_init(){
 	stepper_a_hasPreviouslyMoved = 0;
 	stepper_a_hasPreviouslyHomed = 0;
 	stepper_a_referencing = 0;
-	stepper_a_prescalerState = 0;
-
+	stepper_a_prescalerFactor = 0;
 	stepper_a_setpoint = 0;
 	stepper_a_position = 0;
 
@@ -192,35 +191,25 @@ uint8_t stepper_a_setSpeed(double value){
 		if ((value * stepper_a_settings.steps_per_unit) > 245)
 		{
 			//No Prescaler
-			stepper_a_prescalerState = 1;
 			stepper_a_prescalerFactor = 1;
 		}
 		else if ((value * stepper_a_settings.steps_per_unit) > 31)
 		{
 			//Prescaler=8
-			stepper_a_prescalerState = 2;
 			stepper_a_prescalerFactor = 8;
 		}
 		//Die Fälle ab hier sind eigentlich uninteressant, da sich das Teil eh nie so langsam bewegen wird, aber der Vollständigkeit halber nehm ichs mal auf
 		else if ((value * stepper_a_settings.steps_per_unit) > 4)
 		{
 			//Prescaler=64
-			stepper_a_prescalerState = 3;
 			stepper_a_prescalerFactor = 64;
-		}
-		else if ((value * stepper_a_settings.steps_per_unit) > 1)
-		{
-			//Prescaler=256
-			stepper_a_prescalerState = 4;
-			stepper_a_prescalerFactor = 256;
 		}
 		else
 		{
-			//Prescaler=1024
-			stepper_a_prescalerState = 5;
-			stepper_a_prescalerFactor = 1024;
+			//Prescaler=256
+			stepper_a_prescalerFactor = 256;
 		}
-
+		
 		stepper_a_speed_factor = (double)F_CPU / ((double)stepper_a_settings.steps_per_unit * (double)stepper_a_prescalerFactor);
 		//Subtracting the Length of one Output Pulse (~2.9us per Step) in TimerRegister Units: Used to compensate the Length of the Pulse, so the Speed is accurate
 		
@@ -261,10 +250,9 @@ void stepper_a_setMotionState(int8_t state){
 		else
 		STEPPER_A_DIRECTION_PORT &= ~(1<<STEPPER_A_DIRECTION_N);    //Direction Pin Low
 		
-		stepper_a_setPrescaler(stepper_a_prescalerState);
+		stepper_a_setPrescaler(stepper_a_prescalerFactor);
 		stepper_a_moving = 1;
 
-		
 	}
 	else if(state > 0 && (!stepper_a_moving || !stepper_a_direction)){
 		stepper_a_direction = 1;
@@ -272,7 +260,7 @@ void stepper_a_setMotionState(int8_t state){
 		STEPPER_A_DIRECTION_PORT &= ~(1<<STEPPER_A_DIRECTION_N);    //Direction Pin Low
 		else
 		STEPPER_A_DIRECTION_PORT |= (1<<STEPPER_A_DIRECTION_N);    //Direction Pin High
-		stepper_a_setPrescaler(stepper_a_prescalerState);
+		stepper_a_setPrescaler(stepper_a_prescalerFactor);
 		stepper_a_moving = 1;
 
 	}
@@ -283,7 +271,7 @@ void stepper_a_setMotionState(int8_t state){
 }
 
 
-void stepper_a_setPrescaler(int8_t state){
+void stepper_a_setPrescaler(int16_t state){
 	
 	//Disable Interrupts
 	cli();
@@ -297,7 +285,7 @@ void stepper_a_setPrescaler(int8_t state){
 		//CS12
 		STEPPER_A_TIMER_TCCRB &=~(1 << 2);//0
 		break;
-		case 2:
+		case 8:
 		//Prescaler=8
 		//CS10
 		STEPPER_A_TIMER_TCCRB &=~(1 << 0);
@@ -306,7 +294,7 @@ void stepper_a_setPrescaler(int8_t state){
 		//CS12
 		STEPPER_A_TIMER_TCCRB &=~(1 << 2);
 		break;
-		case 3:
+		case 64:
 		//Prescaler=64
 		//CS10
 		STEPPER_A_TIMER_TCCRB |= (1 << 0);
@@ -315,19 +303,10 @@ void stepper_a_setPrescaler(int8_t state){
 		//CS12
 		STEPPER_A_TIMER_TCCRB &=~(1 << 2);
 		break;
-		case 4:
+		case 256:
 		//Prescaler=256
 		//CS10
 		STEPPER_A_TIMER_TCCRB &=~(1 << 0);
-		//CS11
-		STEPPER_A_TIMER_TCCRB &=~(1 << 1);
-		//CS12
-		STEPPER_A_TIMER_TCCRB |= (1 << 2);
-		break;
-		case 5:
-		//Prescaler=1024
-		//CS10
-		STEPPER_A_TIMER_TCCRB |= (1 << 0);
 		//CS11
 		STEPPER_A_TIMER_TCCRB &=~(1 << 1);
 		//CS12

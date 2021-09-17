@@ -18,8 +18,7 @@ void stepper_b_init(){
 	stepper_b_hasPreviouslyMoved = 0;
 	stepper_b_hasPreviouslyHomed = 0;
 	stepper_b_referencing = 0;
-	stepper_b_prescalerState = 0;
-
+	stepper_a_prescalerFactor = 0;
 	stepper_b_setpoint = 0;
 	stepper_b_position = 0;
 
@@ -191,33 +190,23 @@ uint8_t stepper_b_setSpeed(double value){
 		if ((value * stepper_b_settings.steps_per_unit) > 245)
 		{
 			//No Prescaler
-			stepper_b_prescalerState = 1;
 			stepper_b_prescalerFactor = 1;
 		}
 		else if ((value * stepper_b_settings.steps_per_unit) > 31)
 		{
 			//Prescaler=8
-			stepper_b_prescalerState = 2;
 			stepper_b_prescalerFactor = 8;
 		}
 		//Die Fälle ab hier sind eigentlich uninteressant, da sich das Teil eh nie so langsam bewegen wird, aber der Vollständigkeit halber nehm ichs mal auf
 		else if ((value * stepper_b_settings.steps_per_unit) > 4)
 		{
 			//Prescaler=64
-			stepper_b_prescalerState = 3;
 			stepper_b_prescalerFactor = 64;
-		}
-		else if ((value * stepper_b_settings.steps_per_unit) > 1)
-		{
-			//Prescaler=256
-			stepper_b_prescalerState = 4;
-			stepper_b_prescalerFactor = 256;
 		}
 		else
 		{
-			//Prescaler=1024
-			stepper_b_prescalerState = 5;
-			stepper_b_prescalerFactor = 1024;
+			//Prescaler=256
+			stepper_b_prescalerFactor = 256;
 		}
 
 		stepper_b_speed_factor = (double)F_CPU / ((double)stepper_b_settings.steps_per_unit * (double)stepper_b_prescalerFactor);
@@ -259,7 +248,7 @@ void stepper_b_setMotionState(int8_t state){
 		else
 		STEPPER_B_DIRECTION_PORT &= ~(1<<STEPPER_B_DIRECTION_N);    //Direction Pin Low
 		
-		stepper_b_setPrescaler(stepper_b_prescalerState);
+		stepper_b_setPrescaler(stepper_b_prescalerFactor);
 		stepper_b_moving = 1;
 
 		
@@ -270,7 +259,7 @@ void stepper_b_setMotionState(int8_t state){
 		STEPPER_B_DIRECTION_PORT &= ~(1<<STEPPER_B_DIRECTION_N);    //Direction Pin Low
 		else
 		STEPPER_B_DIRECTION_PORT |= (1<<STEPPER_B_DIRECTION_N);    //Direction Pin High
-		stepper_b_setPrescaler(stepper_b_prescalerState);
+		stepper_b_setPrescaler(stepper_b_prescalerFactor);
 		stepper_b_moving = 1;
 
 	}
@@ -281,7 +270,7 @@ void stepper_b_setMotionState(int8_t state){
 }
 
 
-void stepper_b_setPrescaler(int8_t state){
+void stepper_b_setPrescaler(int16_t state){
 	
 	//Disable Interrupts
 	cli();
@@ -295,7 +284,7 @@ void stepper_b_setPrescaler(int8_t state){
 		//CS12
 		STEPPER_B_TIMER_TCCRB &=~(1 << 2);//0
 		break;
-		case 2:
+		case 8:
 		//Prescaler=8
 		//CS10
 		STEPPER_B_TIMER_TCCRB &=~(1 << 0);
@@ -304,7 +293,7 @@ void stepper_b_setPrescaler(int8_t state){
 		//CS12
 		STEPPER_B_TIMER_TCCRB &=~(1 << 2);
 		break;
-		case 3:
+		case 64:
 		//Prescaler=64
 		//CS10
 		STEPPER_B_TIMER_TCCRB |= (1 << 0);
@@ -313,19 +302,10 @@ void stepper_b_setPrescaler(int8_t state){
 		//CS12
 		STEPPER_B_TIMER_TCCRB &=~(1 << 2);
 		break;
-		case 4:
+		case 256:
 		//Prescaler=256
 		//CS10
 		STEPPER_B_TIMER_TCCRB &=~(1 << 0);
-		//CS11
-		STEPPER_B_TIMER_TCCRB &=~(1 << 1);
-		//CS12
-		STEPPER_B_TIMER_TCCRB |= (1 << 2);
-		break;
-		case 5:
-		//Prescaler=1024
-		//CS10
-		STEPPER_B_TIMER_TCCRB |= (1 << 0);
 		//CS11
 		STEPPER_B_TIMER_TCCRB &=~(1 << 1);
 		//CS12

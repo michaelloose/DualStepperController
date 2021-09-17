@@ -59,13 +59,11 @@ void handleCommands(USB_ClassInfo_CDC_Device_t* pInterface){
 		
 		//Software-Reset
 		if (((commandBuffer[0] == 'R') || (commandBuffer[0] == 'r'))&&((commandBuffer[1] == 'S') || (commandBuffer[1] == 's'))&&((commandBuffer[2] == 'T') || (commandBuffer[2] == 't'))){
-			do
-			{
+
 				wdt_enable(WDTO_15MS);
 				for(;;)
 				{
 				}
-			} while(0);
 		}
 		
 		if (driveState != DRV_STATE_ESTOP)
@@ -396,14 +394,14 @@ void handleCommands(USB_ClassInfo_CDC_Device_t* pInterface){
 					if ((commandBuffer[1] == 'R') || (commandBuffer[1] == 'r'))
 					{
 						
-						(*pHalt)();
+						(*pHome)();
 						strcpy(answerString, driveName);
 						strcat(answerString, "R=");
 					}
 					if ((commandBuffer[1] == 'H') || (commandBuffer[1] == 'h'))
 					{
 											
-						(*pHome)();
+						(*pHalt)();
 						strcpy(answerString, driveName);
 						strcat(answerString, "H=");
 					}

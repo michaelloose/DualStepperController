@@ -60,7 +60,7 @@ int main (void) {
 	clock_prescale_set(clock_div_1);
 	USB_Init();
 
-	GlobalInterruptEnable();
+	sei();
 	
 	
 	DDRB |= (1 << 0);

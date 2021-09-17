@@ -19,12 +19,11 @@ Paritätsbits hinfällig. Der Controller unterscheidet bei den Befehlen
 nicht zwischen Groß- und Kleinschreibung. Das Ende eines Befehles wird
 durch ein Carriage Return `<CR> Hex:0x0D` signalisiert. Alternativ wird
 auch ein Line Feed `<LF> Hex:0x0A` akzeptiert. Ein Befehl darf eine
-maximale Länge von zwölf [ASCII]{acronym-label="ASCII"
-acronym-form="singular+short"}-Zeichen zuzüglich des Terminatorzeichens
+maximale Länge von zwölf ASCII-Zeichen zuzüglich des Terminatorzeichens
 aufweisen. Wird diese Länge überschritten, so wird das dreizehnte
 Zeichen unabhängig vom Inhalt aus Terminator gewertet.\
 Zum Testen des Controllers wird eine serielle Konsole benötigt. Dazu
-eignet sich die Software *hTerm* [@hTerm], welche sowohl unter Windows
+eignet sich die Software *hTerm*, welche sowohl unter Windows
 als auch unter Linux ausgeführt werden kann. Um den Motortreiber in eine
 Softwareumgebung einzubinden, wurde eine
 Treiberklasse in Python entwickelt, die es einem ermöglicht
@@ -38,8 +37,8 @@ verfahren zu können.
   |-------------------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------
   |Reset              |`RST<cr>`  |Neustart des Controllers. Trennt ebenfalls die USB-Verbindung.
   |Halt               |`HLT<cr>`  |Anhalten aller Antriebe. Neue Befehle werden akzeptiert, Spulen sind weiterhin bestromt.
-  |Not-Halt           |`RST<cr>`  |Anhalten aller Antriebe. Neue Befehle werden nicht mehr akzeptiert, Spulenstrom wird abgeschaltet, somit können die Antriebe von Hand bewegt werden
-  |Freigabe Not-Halt  |`RST<cr>`  |Rücksetzen des Not-Halt Zustandes. Spulenstrom wird aktiviert und neue Befehle akzeptiert.
+  |Not-Halt           |`EST<cr>`  |Anhalten aller Antriebe. Neue Befehle werden nicht mehr akzeptiert, Spulenstrom wird abgeschaltet, somit können die Antriebe von Hand bewegt werden
+  |Freigabe Not-Halt  |`ESR<cr>`  |Rücksetzen des Not-Halt Zustandes. Spulenstrom wird aktiviert und neue Befehle akzeptiert.
 
 
 ### Steuerbefehle
@@ -56,8 +55,8 @@ verfahren zu können.
  |         |`R` Referenzfahrt                             | 
  | 3       |`=` Zuweisung                                 | Zuweisung oder Abfrage
  |         |`?` Abfrage                                   | 
- | 4\...   |**\<Wert>** Punkt als Dezimalseparator        | Nur für Setzen von Position und Geschwindigkeit
- | N       |**\<CR>** Carriage Return                     | Ende eines Befehls
+ | 4\...   |`<Wert>` Punkt als Dezimalseparator           | Nur für Setzen von Position und Geschwindigkeit
+ | N       |`<CR>` Carriage Return                        | Ende eines Befehls
 
 
 #### Antwort vom Controller
@@ -67,8 +66,8 @@ verfahren zu können.
   |1..2   |Byte 1 u. 2 des Befehls                    |Wiederholen des empfangenen Befehls
   |3      |`!` Ausführung Abgeschlossen               |Art der Antwort
   |       |`=` Befehl Empfangen, Antwort auf Anfrage  |
-  |4\...  |**\<Wert>** Punkt als Dezimalseparator     |Wert als Antwort einer Anfrage
-  |N      |**\<CR>** Carriage Return                  |Ende eines Befehls
+  |4\...  |`<Wert>` Punkt als Dezimalseparator        |Wert als Antwort einer Anfrage
+  |N      |`<CR>` Carriage Return                     |Ende eines Befehls
 
 
 
