@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>298</width>
+    <height>307</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Antriebssteuerung</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_3">
+    <item row="0" column="0">
+     <widget class="DriveControlWidget" name="DriveControlWidget" native="true">
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>298</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuDrive_Controller">
+    <property name="title">
+     <string>Menü</string>
+    </property>
+    <widget class="QMenu" name="menuCOM_Port">
+     <property name="title">
+      <string>COM Port</string>
+     </property>
+     <addaction name="separator"/>
+    </widget>
+    <addaction name="menuCOM_Port"/>
+    <addaction name="actionEmergency_Stop"/>
+    <addaction name="actionEnable_Controls"/>
+   </widget>
+   <addaction name="menuDrive_Controller"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionEmergency_Stop">
+   <property name="text">
+    <string>Not Aus</string>
+   </property>
+   <property name="shortcut">
+    <string>Esc</string>
+   </property>
+   <property name="shortcutVisibleInContextMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionEnable_Controls">
+   <property name="text">
+    <string>Not Aus zurücksetzen</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>DriveControlWidget</class>
+   <extends>QWidget</extends>
+   <header>DriveControlWidget</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
